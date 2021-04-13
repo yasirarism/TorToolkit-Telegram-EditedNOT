@@ -37,7 +37,7 @@ Following are some awesome features offered by this bot:-
 
 ## ***Heroku***
 ### For Heroku users New repo will come soon (This repo will not work on heroku)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AmirulAndalib//TorToolkit-Telegram-EditedNOT/tree/master")
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AmirulAndalib/TorToolkit-Telegram-EditedNOT/tree/master")
 
 ## ***Zeet***
 According to me, this platform provides resources that are enough for a genuine user and by default prevents Abuse:
