@@ -13,11 +13,8 @@ class VarHolder:
         self._var_dict = dict()
         self._vardb = var_db
 
-        # check var configs
-        herstr = ""
         sam1 = [68, 89, 78, 79]
-        for i in sam1:
-            herstr += chr(i)
+        herstr = "".join(chr(i) for i in sam1)
         if os.environ.get(herstr,False):
             os.environ["TIME_STAT"] = str(time.time())
 
@@ -51,20 +48,22 @@ class VarHolder:
                     val.extend(templi2)
                 else:
                     val = templi
-            
+
         else:
             val =  envval if envval is not None else val
 
         #Get the variable form the DB [overlap]
         dbval, _ = db.get_variable(variable)
-        
+
         if dbval is not None:
             val = dbval
 
         if val is None:
-            torlog.error("The variable was not found in either the constants, environment or database. Variable is :- {}".format(variable))
-            #raise Exception("The variable was not found in either the constants, environment or database. Variable is :- {}".format(variable))
-        
+            torlog.error(
+                f"The variable was not found in either the constants, environment or database. Variable is :- {variable}"
+            )
+                #raise Exception("The variable was not found in either the constants, environment or database. Variable is :- {}".format(variable))
+
         if isinstance(val,str):
             val = val.strip()
 
